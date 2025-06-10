@@ -1,9 +1,12 @@
-traffic_sign = ['red', 'green', 'green', 'red', 'green', 'green', 'red']
+def decide_direction(sign_color):
+    if sign_color == 'red':
+        return 'Pass on the right'
+    elif sign_color == 'green':
+        return 'Pass on the left'
+    else:
+        return 'Unknown sign color'
 
-
-for sign in traffic_sign:
-    if sign == 'red':
-        print("Right")
-    elif sign == 'green':
-        print("Left")
+color = input('Enter the sign color green or red:')
+decision = decide_direction(color)
+print(decision)
 
